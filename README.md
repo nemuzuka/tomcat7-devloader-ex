@@ -27,15 +27,23 @@ Installation
 
 Configurations
 -------------------------
-referencePath.conf format is
-[workspace dir],[class dir]
+referencePath.confの指定内容は、
+[参照プロジェクトまでのpath,プロジェクトの出力ディレクトリのpath]
 
-<pre>
-# for examples
-C:/eclipse/workspace,/target/classes
-</pre>
+例えば、参照プロジェクト(app-common)が、
+C:/eclipse/workspace/project
+ディレクトリに配置されていて、出力ディレクトリがEclipse上で
+/target/classes
+と設定されている場合、referencePath.confには、
+<pre>C:/eclipse/workspace/project,/target/classes</pre>
+と記述します。
+
+Loadする際に、
+C:/eclipse/workspace/project/app-common/target/classes
+をクラスパスに追加します。
+
 
 References
 ----------
 * Windows8(64bit) + Eclipse3.7 + Sysdeo Eclipse Tomcat Launcher plugin 3.3 + Tomcat7での確認
-
+* Mac OS X Mountain Lion + Eclipse4.2 + Sysdeo Eclipse Tomcat Launcher plugin 3.3 + Tomcat7での確認
